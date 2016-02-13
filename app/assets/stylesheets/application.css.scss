@@ -1,0 +1,31 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@mixin box-shadow {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+	-moz-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+	box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+}
+
+body {
+	background: rgb(235, 238, 243);
+}
+
+.navbar {
+  margin-bottom: 50px;
+  @include box-shadow;
+  border: none;
+  .navbar-brand {
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+    font-size: 25px;
+    a {
+      color: silver;
+      &:hover {
+        color: blue;
+        text-decoration: none;
+      }
+    }
+  }
+}
