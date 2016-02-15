@@ -6,4 +6,6 @@ class Book < ActiveRecord::Base
   validates :ISBN_number, presence: true, length: { in: 10..13 }, uniqueness: true
   validates :year, presence: true, length: { minimum: 4}
   validates :publisher, presence: true
+
+  belongs_to :user
 end
