@@ -12,6 +12,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem "paperclip", "~> 4.3"
 gem 'simple_form'
 gem 'rspec', '~> 3.4'
+gem 'devise'
 
 group :test do
   gem 'shoulda-matchers'
