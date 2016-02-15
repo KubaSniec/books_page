@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160212162502) do
+ActiveRecord::Schema.define(version: 20160213133227) do
 
   create_table "books", force: :cascade do |t|
     t.string   "author"
@@ -21,8 +21,12 @@ ActiveRecord::Schema.define(version: 20160212162502) do
     t.integer  "page_count"
     t.integer  "year"
     t.string   "publisher"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
   end
 
 end

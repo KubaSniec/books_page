@@ -4,6 +4,6 @@
       .col-md-4
         .book
           .image_wrapper
-            = link_to book
+            = link_to (image_tag book.cover.url(:medium), class: 'image'), book
           #book_title
             %h2= link_to book.title, book

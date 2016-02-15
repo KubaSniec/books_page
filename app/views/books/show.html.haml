@@ -1,27 +1,39 @@
-%p#notice= notice
+.panel.panel-default
+  .panel-body
+    .row
+      .col-md-5
+        #cover
+          = image_tag @book.cover.url(:medium)
+        .table-responsive
+          %table.table
+            %tr
+              %td
+                %strong Title:
+              %td= @book.title
+            %tr
+              %td
+                %strong Author:
+              %td= @book.author
+            %tr
+              %td
+                %strong Publisher:
+              %td= @book.publisher
+            %tr
+              %td
+                %strong Date of publication:
+              %td= @book.year
+            %tr
+              %td
+                %strong ISBN number:
+              %td= @book.ISBN_number
+            %tr
+              %td
+                %strong Pages:
+              %td= @book.page_count
+            %tr
+              %td
+                %strong Description:
+              %td= @book.description
+= link_to 'Edit', edit_book_path(@book), class: "btn btn-default"
 
-%p
-  %b Author:
-  = @book.author
-%p
-  %b Title:
-  = @book.title
-%p
-  %b Description:
-  = @book.description
-%p
-  %b Isbn number:
-  = @book.ISBN_number
-%p
-  %b Page count:
-  = @book.page_count
-%p
-  %b Year:
-  = @book.year
-%p
-  %b Publisher:
-  = @book.publisher
-
-= link_to 'Edit', edit_book_path(@book)
-\|
-= link_to 'Back', books_path
+= link_to 'Back', books_path, class: "btn btn-default"

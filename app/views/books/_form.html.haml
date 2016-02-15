@@ -1,31 +1,17 @@
-= form_for @book do |f|
+= simple_form_for @book, html: { multipart: true } do |f|
   - if @book.errors.any?
-    #error_explanation
+    #errors
       %h2= "#{pluralize(@book.errors.count, "error")} prohibited this book from being saved:"
       %ul
         - @book.errors.full_messages.each do |msg|
           %li= msg
-
-  .field
-    = f.label :author
-    = f.text_field :author
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :description
-    = f.text_area :description
-  .field
-    = f.label :ISBN_number
-    = f.text_field :ISBN_number
-  .field
-    = f.label :page_count
-    = f.number_field :page_count
-  .field
-    = f.label :year
-    = f.number_field :year
-  .field
-    = f.label :publisher
-    = f.text_field :publisher
-  .actions
-    = f.submit 'Save'
+  .panel-body
+    = f.input :author, input_html: { class: 'form-control' }
+    = f.input :title, input_html: { class: 'form-control' }
+    = f.input :description, input_html: { class: 'form-control' }
+    = f.input :ISBN_number, input_html: { class: 'form-control' }
+    = f.input :page_count, input_html: { class: 'form-control' }
+    = f.input :year, input_html: { class: 'form-control' }
+    = f.input :publisher, input_html: { class: 'form-control' }
+    = f.input :cover, as: :file, input_html: { class: 'form-control' }
+    = f.button :submit , class: "btn btn-primary add-button"
