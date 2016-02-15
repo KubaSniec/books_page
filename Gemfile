@@ -13,6 +13,7 @@ gem "paperclip", "~> 4.3"
 gem 'simple_form'
 gem 'rspec', '~> 3.4'
 gem 'devise'
+gem 'draper', '~> 1.3'
 
 group :test do
   gem 'shoulda-matchers'
