@@ -12,8 +12,15 @@ gem 'haml-rails', '~> 0.9.0'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem "paperclip", "~> 4.3"
 gem 'simple_form'
+gem 'rspec', '~> 3.4'
+
+group :test do
+  gem 'shoulda-matchers'
+end
 
 group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
