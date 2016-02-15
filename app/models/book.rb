@@ -1,5 +1,5 @@
 class Book < ActiveRecord::Base
-  has_attached_file :cover, styles: { medium: "300x400#" }
+  has_attached_file :cover, styles: { medium: "300x400#" }, default_url: ":style/missing.png"
   validates_attachment_content_type :cover, content_type: /\Aimage\/.*\Z/
   validates :author, presence: true
   validates :title, presence: true
